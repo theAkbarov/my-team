@@ -1,3 +1,102 @@
 @import 'config';
 @import 'mixins';
 @import 'normalize';
+
+// Defaul container styles
+.container {
+    width: 100%;
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: $midnightGreen;
+    padding: 73px 0;
+
+    .header__inner {
+        @include flexBetween;
+
+        .header-left {
+            @include flexBetween;
+            width: 30%;
+
+            &__link {
+                text-decoration: none;
+                color: white;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+
+        .header-right {
+            &__link--primary {
+                text-decoration: none;
+                border: 2px solid #FFFFFF;
+                border-radius: 24px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 28px;
+                padding: 10px 33px;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+.site-hero {
+    background-color: $midnightGreen;
+    background-image:  url('#{$img}/bg-image1.png'), url('#{$img}/bg0image2.png');
+    background-repeat: no-repeat;
+    background-position: left 28%, 80% bottom;
+    padding: 56px 0 250px 0;
+
+        
+    &__inner {
+        @include flexBetween;
+
+        .hero-left {
+            width: 50%;
+
+            &__text {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 100px;
+                line-height: 100px;
+                color: #FFFFFF;
+
+                span {
+                    color: $lightCoral;
+                }
+            }
+        }
+
+        .hero-right {
+            width: 50%;
+            padding-top: 77px;
+            
+            &__text {
+                position: relative;
+                float: right;
+                width: 442px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 28px;
+                color: #FFFFFF;
+                &::before {
+                    content: '';
+                    width: 50px;
+                    height: 4px;
+                    position: absolute;
+                    top: -79px;
+                    left: 0;
+                    background: $raptureBlue;
+                }
+            }
+        }
+    }
+}
