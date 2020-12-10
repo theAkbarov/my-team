@@ -195,7 +195,7 @@
         box-sizing: border-box;
     }
 
-    @media screen and(max-width: 375px) {
+    @media screen and(max-width: 500px) {
         width: 345px;
         width: 100%;
         padding: 0 15px;
@@ -225,7 +225,7 @@ body {
 
 
             &__link {
-                @media screen and (max-width: 375px) {
+                @media screen and (max-width: 500px) {
                     display: none;
                 }
 
@@ -239,7 +239,7 @@ body {
         }
 
         .header-right {
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: 500px) {
                 display: none;
             }
 
@@ -262,7 +262,7 @@ body {
 .burger-button {
     display: none;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 500px) {
         display: block;
     }
 }
@@ -285,7 +285,7 @@ body {
         transform: translateX(0);
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 500px) {
         display: block;
     }
 
@@ -354,7 +354,7 @@ body {
                 }
             }
 
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: 500px) {
                 width: 100%;
                 .hero-left__text {
                     font-style: normal;
@@ -378,7 +378,7 @@ body {
                     color: $lightCoral;
                 }
 
-                @media screen and (max-width: 375px) {
+                @media screen and (max-width: 500px) {
 
                     font-size: 15px;
                     line-height: 28px;
@@ -484,7 +484,7 @@ body {
                 display: flex;
                 margin-bottom: 32px;
                 width: 540px;
-                @media screen and (max-width: 375px){
+                @media screen and (max-width: 500px){
                     width: 95%;
                     flex-direction: column;
                     text-align: center;
