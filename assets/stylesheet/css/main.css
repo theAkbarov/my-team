@@ -1306,6 +1306,12 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .form {
+    background-position: left 20%, right 110%;
+  }
+}
+
 .form .form-inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1328,6 +1334,15 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .form .form-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .form .form-inner .right {
   width: 50%;
 }
@@ -1335,6 +1350,14 @@ body {
 @media screen and (max-width: 500px) {
   .form .form-inner .right {
     width: 90%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form .form-inner .right {
+    width: 70%;
+    margin-bottom: 62px;
     text-align: center;
   }
 }
@@ -1388,6 +1411,13 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .form .form-inner .left {
+    width: 70%;
+    text-align: center;
+  }
+}
+
 .form .form-inner .left form {
   position: relative;
 }
@@ -1425,6 +1455,7 @@ body {
   line-height: 25px;
   letter-spacing: -0.115385px;
   color: #FFFFFF;
+  float: left;
   -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s all;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s all;
   mix-blend-mode: normal;
@@ -1492,5 +1523,17 @@ body {
 @media screen and (max-width: 500px) {
   .form .form-inner .left form button {
     float: left;
+    margin-top: 14px;
+    position: relative;
+    left: -19%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form .form-inner .left form button {
+    float: left;
+    margin-top: 14px;
+    position: relative;
+    left: -19%;
   }
 }

@@ -823,6 +823,12 @@ body {
 
     }
 
+    @media screen and (max-width: 768px) {
+        background-position: left 20%,
+            right 110%;
+
+    }
+
     .form-inner {
         @include flexBetween;
 
@@ -832,11 +838,21 @@ body {
             flex-direction: column;
         }
 
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
         .right {
             width: 50%;
 
             @media screen and (max-width: 500px) {
                 width: 90%;
+                text-align: center;
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 70%;
+                margin-bottom: 62px;
                 text-align: center;
             }
 
@@ -885,6 +901,11 @@ body {
                 text-align: center;
             }
 
+            @media screen and (max-width: 768px) {
+                width: 70%;
+                text-align: center;
+            }
+
             form {
                 position: relative;
 
@@ -918,6 +939,7 @@ body {
                     line-height: 25px;
                     letter-spacing: -0.115385px;
                     color: #FFFFFF;
+                    float: left;
                     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s all;
                     mix-blend-mode: normal;
                     opacity: 0.6;
@@ -978,7 +1000,19 @@ body {
                     }
 
                     @media screen and (max-width: 500px) {
-                        float: left
+                        float: left;
+                        margin-top: 14px;
+                        position: relative;
+                        left: -19%;
+
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        float: left;
+                        margin-top: 14px;
+                        position: relative;
+                        left: -19%;
+
                     }
                 }
             }
