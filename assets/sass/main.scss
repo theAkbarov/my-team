@@ -187,6 +187,20 @@
     max-width: 1140px;
     padding: 0 15px;
     margin: 0 auto;
+
+    @media screen and(max-width: 768px) {
+        width: 720px;
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    @media screen and(max-width: 375px) {
+        width: 345px;
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
 }
 
 body {
@@ -211,6 +225,10 @@ body {
 
 
             &__link {
+                @media screen and (max-width: 375px) {
+                    display: none;
+                }
+
                 text-decoration: none;
                 color: white;
                 font-style: normal;
@@ -221,6 +239,10 @@ body {
         }
 
         .header-right {
+            @media screen and (max-width: 375px) {
+                display: none;
+            }
+
             &__link--primary {
                 text-decoration: none;
                 border: 2px solid #FFFFFF;
@@ -232,6 +254,68 @@ body {
                 padding: 10px 33px;
                 color: #FFFFFF;
             }
+
+        }
+    }
+}
+
+.burger-button {
+    display: none;
+
+    @media screen and (max-width: 375px) {
+        display: block;
+    }
+}
+
+.mobile-menu {
+    position: fixed;
+    display: none;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 225px;
+    background-image: url(#{$img}/);
+    background-color: $policeBLue;
+    z-index: 3;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding: 56px 25px 0 0;
+    transform: translateX(300px);
+
+    &.active {
+        transform: translateX(0);
+    }
+
+    @media screen and (max-width: 375px) {
+        display: block;
+    }
+
+    .mobile-menu__icon {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 40px;
+    }
+
+    .link {
+        text-decoration: none;
+        display: block;
+        font-style: normal;
+        padding: 0 48px;
+        font-weight: 600;
+        font-size: 18px;
+        overflow: hidden;
+        line-height: 28px;
+        color: #FFFFFF;
+        margin-bottom: 24px;
+
+        &.button {
+            margin-left: 45px;
+            display: inline-block;
+            padding: 10px 33px;
+            border: 2px solid #FFFFFF;
+            box-sizing: border-box;
+            border-radius: 24px;
+            line-height: 28px;
+            text-align: center;
         }
     }
 }
@@ -266,7 +350,19 @@ body {
                 .hero-left__text {
                     font-size: 64px;
                     line-height: 56px;
-                    /* or 87% */
+
+                }
+            }
+
+            @media screen and (max-width: 375px) {
+                width: 100%;
+                .hero-left__text {
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 40px;
+                    margin-bottom: 14px;
+                    line-height: 40px;
+                    text-align: center;
                 }
             }
 
@@ -281,6 +377,12 @@ body {
                 span {
                     color: $lightCoral;
                 }
+
+                @media screen and (max-width: 375px) {
+
+                    font-size: 15px;
+                    line-height: 28px;
+                }
             }
         }
 
@@ -289,7 +391,7 @@ body {
             padding-top: 77px;
 
             @media screen and (max-width: 768px) {
-                // width: 100%;
+                width: 100%;
                 text-align: center;
                 padding-top: 24px;
             }
@@ -334,9 +436,10 @@ body {
     background-repeat: no-repeat;
     background-position: bottom right;
     padding: 198px 0 140px 0;
- @media screen and (max-width: 768px) {
-    background-position: top right;
-}
+
+    @media screen and (max-width: 768px) {
+        background-position: top right;
+    }
 
     .teams__inner {
         @include flexBetween;
@@ -381,7 +484,11 @@ body {
                 display: flex;
                 margin-bottom: 32px;
                 width: 540px;
-
+                @media screen and (max-width: 375px){
+                    width: 95%;
+                    flex-direction: column;
+                    text-align: center;
+                }
                 .team-item__img {
                     margin-bottom: 15px;
                     display: block;
@@ -430,7 +537,8 @@ body {
         span {
             color: $raptureBlue
         }
-        @media screen and (max-width: 768px){
+
+        @media screen and (max-width: 768px) {
             font-size: 32px;
             line-height: 32px;
         }
@@ -438,7 +546,8 @@ body {
 
     .stories-wrapper {
         @include flexBetween;
-        @media screen and (max-width: 768px){
+
+        @media screen and (max-width: 768px) {
             flex-direction: column;
         }
 
@@ -450,9 +559,11 @@ body {
             background: url(#{$icon}/quote-icon.svg);
             background-repeat: no-repeat;
             background-position: top center;
-            @media screen and(max-width:768px){
+
+            @media screen and(max-width:768px) {
                 width: 60%;
             }
+
             .story-item__title {
                 font-style: normal;
                 font-weight: 600;
@@ -503,16 +614,19 @@ body {
     .contact-inner {
         padding: 76px 15px;
         @include flexBetween;
-            @media screen and(max-width: 768px) {
-                justify-content: space-evenly;
-            }
+
+        @media screen and(max-width: 768px) {
+            justify-content: space-evenly;
+        }
+
         .contact-heading {
             font-style: normal;
             font-weight: bold;
             font-size: 48px;
             line-height: 48px;
             color: $sacramento;
-            @media screen and(max-width: 768px){
+
+            @media screen and(max-width: 768px) {
                 font-size: 32px;
                 line-height: 32px;
             }
@@ -541,12 +655,15 @@ body {
     .footer__inner {
         @include flexBetween;
         flex-wrap: wrap;
+
         .footer-left {
             width: 50%;
             @include flexBetween;
-            @media screen and (max-width: 768px){
+
+            @media screen and (max-width: 768px) {
                 width: 100%;
             }
+
             .footer-left__logo {
                 margin-right: 120px;
 
@@ -587,11 +704,13 @@ body {
 
         .footer-right {
             width: 30%;
+
             @media screen {
                 @include flexBetween;
                 width: 100%;
-                
+
             }
+
             .footer-right__top {
                 display: flex;
                 justify-content: flex-end;
