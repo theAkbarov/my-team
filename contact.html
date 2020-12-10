@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My team | Main</title>
-    <link rel="stylesheet" href="./assets/fonts/transfonter.org-20201208-180004/stylesheet.css">
+    <title>Contact | My-team</title>
     <link rel="stylesheet" href="./assets/stylesheet/min.css/main.min.css">
+    <link rel="stylesheet" href="./assets/fonts/transfonter.org-20201208-180004/stylesheet.css">
+
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <div class="header__inner container">
             <div class="header-left">
                 <a href="index.html" class="header-left__logo"><img src="./assets/icons/myteam.svg" alt="site logo"></a>
-                <a href="#" class="header-left__link">home</a>
+                <a href="index.html" class="header-left__link">home</a>
                 <a href="#" class="header-left__link">about</a>
             </div>
             <div class="header-right">
@@ -27,109 +28,58 @@
                 <a class="close-btn" href="#"><img src="./assets/icons/X-icon.svg" alt=""></a>
             </div>
             <div class="mobile-menu__link">
-                <a href="#" class="link">home</a>
-                <a href="#" class="link">about</a>
+                <a href="javascript:void(0)" class="link">home</a>
+                <a href="javascript:void(0)" class="link">about</a>
                 <a href="contact.html" class="link button">contact us</a>
             </div>
         </div>
         </div>
 
     </header>
-    <section class="site-hero">
-        <div class="site-hero__inner container">
-            <div class="hero-left">
-                <h1 class="hero-left__text">Find the best <span>talent</span></h1>
-            </div>
-            <div class="hero-right">
-                <p class="hero-right__text">
-                    Finding the right people and building high performing teams can be hard. Most companies aren’t
-                    tapping into the abundance of global talent. We’re about to change that.
-                </p>
-            </div>
-        </div>
-    </section>
-    <section class="teams">
-        <div class="teams__inner container">
-            <div class="team-right">
-                <h1 class="teams-heading">Build & manage distributed teams like no one else.</h1>
-            </div>
-            <div class="team-left">
-                <div class="team-item">
-                    <img src="./assets/icons/quality.svg" class="team-item__img"></img>
-                    <div class="team-item__content">
-                        <h3 class="item-name">
-                            Experienced Individuals
-                        </h3>
-                        <p class="item-text">
-                            Our network is made up of highly experienced professionals who are passionate about what
-                            they do.
-                        </p>
-                    </div>
+
+    <section class="form">
+        <div class="form-inner container">
+            <div class="right">
+                <h1 class="right__title">Contact</h1>
+                <h3 class="right__subtitle">Ask us about</h3>
+                <div class="right__item">
+                    <img src="./assets/icons/quality.svg" alt="quality" class="image">
+                    <p class="name">The quality of our talent network</p>
                 </div>
-                <div class="team-item">
-                    <img src="./assets/icons/setting.svg" class="team-item__img"></img>
-                    <div class="team-item__content">
-                        <h3 class="item-name">
-                            Easy to Implement
-                        </h3>
-                        <p class="item-text">
-                            Our processes have been refined over years of implementation meaning our teams always
-                            deliver.
-                        </p>
-                    </div>
+                <div class="right__item">
+                    <img src="./assets/icons/setting.svg" alt="quality" class="image">
+                    <p class="name">Usage & implementation of our software</p>
                 </div>
-                <div class="team-item">
-                    <img src="./assets/icons/statistics.svg" class="team-item__img"></img>
-                    <div class="team-item__content">
-                        <h3 class="item-name">
-                            Enhanced Productivity
-                        </h3>
-                        <p class="item-text">
-                            Our customized platform with in-built analytics helps you manage your distributed teams.
-                        </p>
-                    </div>
+                <div class="right__item">
+                    <img src="./assets/icons/statistics.svg" alt="quality" class="image">
+                    <p class="name">How we help drive innovation</p>
                 </div>
+            </div>
+            <div class="left">
+                <form action="https://echo.htmlacademy.ru" method="GET">
+                    <input type="text" id="fname" name="first name">
+                    <label for="fname">Name</label>
+
+                    <input type="email" required name="email address" id="mail">
+                    <label for="mail">Email Address</label>
+
+                    <input type="text" id="company" name="Company name">
+                    <label for="company">Company Name</label>
+
+                    <input type="text" name="title" id="title">
+                    <label for="title">Title</label>
+
+                    <textarea name="message" id="message" cols="30" rows="3"></textarea>
+                    <label for="message">Message</label>
+                    <button type="submit">submit</button>
+                </form>
             </div>
         </div>
     </section>
-    <section class="stories">
-        <div class="stories-inner container">
-            <h1 class="stories-title">Delivering real results for top companies. Some of our <span>success
-                    stories.</span></h1>
-            <div class="stories-wrapper">
-                <div class="story-item">
-                    <p class="story-item__title"> “The team perfectly fit the specialized skill set required. They
-                        focused on the most essential features helping us launch the platform eight months faster than
-                        planned.”</p>
-                    <h3 class="story-item__name">Kady Baker</h3>
-                    <p class="story-item__subtitle">Product Manager at Bookmark</p>
-                    <img src="./assets/images/Kady.png" class="story-item__img" alt="">
-                </div>
-                <div class="story-item">
-                    <p class="story-item__title"> “We needed to automate our entire onboarding process. The team came in
-                        and built out the whole journey. Since going live, user retention has gone through the roof!”
-                    </p>
-                    <h3 class="story-item__name">Aiysha Reese</h3>
-                    <p class="story-item__subtitle">Founder of Manage</p>
-                    <img src="./assets/images/aiysha.png" class="story-item__img" alt="">
-                </div>
-                <div class="story-item">
-                    <p class="story-item__title"> “Amazing. Our team helped us build an app that delivered a new
-                        experience for hiring a physio. The launch was an instant success with 100k downloads in the
-                        first month.”</p>
-                    <h3 class="story-item__name">Arthur Clarke</h3>
-                    <p class="story-item__subtitle">Co-founder of MyPhysio</p>
-                    <img src="./assets/images/arthur-togo.png" class="story-item__img" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="contact">
-        <div class="contact-inner container">
-            <h3 class="contact-heading">Ready to get started?</h3>
-            <a href="contact.html" class="contact-btn">Contact us</a>
-        </div>
-    </section>
+
+
+
+
     <footer class="footer">
         <div class="footer__inner container">
             <div class="footer-left">

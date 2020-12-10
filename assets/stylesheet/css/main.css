@@ -53,7 +53,11 @@ hr {
   /* 2 */
 }
 
-h3, h4, h5, h6, h2 {
+h3,
+h4,
+h5,
+h6,
+h2 {
   padding: 0;
   margin: 0;
 }
@@ -562,12 +566,18 @@ body {
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
 }
 
 @media screen and (max-width: 500px) {
   .header .header__inner .header-left__link {
     display: none;
   }
+}
+
+.header .header__inner .header-left__link:hover {
+  color: #F67E7E;
 }
 
 @media screen and (max-width: 500px) {
@@ -586,6 +596,13 @@ body {
   line-height: 28px;
   padding: 10px 33px;
   color: #FFFFFF;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+.header .header__inner .header-right__link--primary:hover {
+  background: #fff;
+  color: #2C6269;
 }
 
 .burger-button {
@@ -645,8 +662,14 @@ body {
   font-size: 18px;
   overflow: hidden;
   line-height: 28px;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
   color: #FFFFFF;
   margin-bottom: 24px;
+}
+
+.mobile-menu .link:hover {
+  color: #F67E7E;
 }
 
 .mobile-menu .link.button {
@@ -659,6 +682,13 @@ body {
   border-radius: 24px;
   line-height: 28px;
   text-align: center;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+
+.mobile-menu .link.button:hover {
+  color: #012F34;
+  background: white;
 }
 
 .site-hero {
@@ -1073,7 +1103,15 @@ body {
   border-radius: 24px;
   padding: 10px 32px;
   text-decoration: none;
+  -webkit-transition: 0.8s all ease;
+  transition: 0.8s all ease;
   text-transform: lowercase;
+}
+
+.contact .contact-inner .contact-btn:hover {
+  border-color: white;
+  background: white;
+  color: #012F34;
 }
 
 .footer {
@@ -1159,6 +1197,12 @@ body {
   color: #FFFFFF;
   text-decoration: none;
   display: inline-block;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+.footer .footer__inner .footer-left .footer-left__logo .footer-link:hover {
+  color: #F67E7E;
 }
 
 .footer .footer__inner .footer-left .footer-left__logo .footer-link.mr {
@@ -1228,6 +1272,16 @@ body {
   margin-left: 16px;
 }
 
+.footer .footer__inner .footer-right .footer-right__top a svg {
+  fill: white;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+
+.footer .footer__inner .footer-right .footer-right__top a svg:hover {
+  fill: #F67E7E;
+}
+
 .footer .footer__inner .footer-right .footer-right__bottom {
   font-style: normal;
   font-weight: 600;
@@ -1237,4 +1291,206 @@ body {
   color: #FFFFFF;
   mix-blend-mode: normal;
   opacity: 0.6;
+}
+
+.form {
+  background-color: #014E56;
+  background-image: url(../../images/contact-bg.png), url(../../images/contact-bg2.png);
+  background-repeat: no-repeat;
+  background-position: left 20%, right bottom;
+}
+
+@media screen and (max-width: 500px) {
+  .form {
+    background-position: left 20%, right 110%;
+  }
+}
+
+.form .form-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 128px;
+}
+
+@media screen and (max-width: 500px) {
+  .form .form-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.form .form-inner .right {
+  width: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  .form .form-inner .right {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+.form .form-inner .right .right__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 100px;
+  font-family: 'Livvic';
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.form .form-inner .right .right__subtitle {
+  margin-bottom: 32px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  color: #F67E7E;
+  line-height: 48px;
+}
+
+.form .form-inner .right .right__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form .form-inner .right .right__item .name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  margin-left: 23px;
+  color: #FFFFFF;
+}
+
+.form .form-inner .left {
+  width: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  .form .form-inner .left {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+.form .form-inner .left form {
+  position: relative;
+}
+
+.form .form-inner .left form input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 16px;
+  display: block;
+  width: 100%;
+  outline: none;
+}
+
+@media screen and (max-width: 500px) {
+  .form .form-inner .left form input {
+    width: 93%;
+  }
+}
+
+.form .form-inner .left form input:focus {
+  border-color: #F67E7E;
+}
+
+.form .form-inner .left form input:focus + label {
+  -webkit-transform: translate(0px, -65px);
+          transform: translate(0px, -65px);
+  color: #F67E7E;
+  opacity: 1;
+}
+
+.form .form-inner .left form label {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  color: #FFFFFF;
+  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s all;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s all;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  -webkit-transform: translate(15px, -35px);
+          transform: translate(15px, -35px);
+  display: block;
+}
+
+.form .form-inner .left form textarea {
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 16px;
+  display: block;
+  width: 100%;
+  resize: none;
+  outline: none;
+}
+
+@media screen and (max-width: 500px) {
+  .form .form-inner .left form textarea {
+    width: 93%;
+  }
+}
+
+.form .form-inner .left form textarea + label {
+  -webkit-transform: translate(10px, -75px);
+          transform: translate(10px, -75px);
+}
+
+.form .form-inner .left form textarea:focus {
+  border-color: #F67E7E;
+}
+
+.form .form-inner .left form textarea:focus + label {
+  color: #F67E7E;
+  opacity: 1;
+  -webkit-transform: translate(0px, -100px);
+          transform: translate(0px, -100px);
+}
+
+.form .form-inner .left form button {
+  padding: 10px 32px;
+  background: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  color: #004047;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 24px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  line-height: 28px;
+}
+
+.form .form-inner .left form button:hover {
+  border-color: #004047;
+  background: #004047;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .form .form-inner .left form button {
+    float: left;
+  }
 }
