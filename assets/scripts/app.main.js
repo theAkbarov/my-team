@@ -7,6 +7,8 @@ $(document).ready(function () {
     $('.close-btn').click(function (e) {
         e.preventDefault();
         $('.mobile-menu').removeClass('active');
+        $('body').css('overflow', 'unset')
+
         $('.overlay').removeClass('active')
 
     });
@@ -17,6 +19,7 @@ $(document).ready(function () {
     $('.overlay').click(function () {
         $('.mobile-menu').removeClass('active');
         $('.overlay').removeClass('active')
+        $('body').css('overflow', 'unset')
 
     })
 })
