@@ -16,8 +16,8 @@ $(document).ready(function () {
     });
     $('.item-icon').click(function (e) {
         e.preventDefault();
-        $('.item-icon').toggleClass('active');
-        $('.layer').fadeToggle(400)
+        $(this).toggleClass('active');
+        $('.layer').toggleClass('fade')
 
     });
 

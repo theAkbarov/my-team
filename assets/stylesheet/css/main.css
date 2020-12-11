@@ -1710,6 +1710,8 @@ body {
 }
 
 .directors .directors-inner .wrapper .wrapper__item {
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
   width: 350px;
   height: 253px;
   margin-bottom: 76px;
@@ -1726,7 +1728,11 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  display: none;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  opacity: 0;
   margin: auto;
   width: 100%;
   height: 100%;
@@ -1807,6 +1813,7 @@ body {
   left: 41%;
   z-index: 77;
   width: 56px;
+  outline: none;
   height: 56px;
   display: block;
   background-color: #F67E7E;
@@ -1822,6 +1829,12 @@ body {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   background-color: #79C8C7;
+}
+
+.wrapper__item .item-icon.active + .layer.fade {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .clients {
@@ -1880,5 +1893,11 @@ body {
   }
   .clients .clinets__wrapper a {
     margin-bottom: 55px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .clients .clinets__wrapper a img {
+    width: 103px;
   }
 }
