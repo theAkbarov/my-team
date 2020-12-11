@@ -278,6 +278,22 @@ body {
     }
 }
 
+.overlay {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    transition: 0.2s all cubic-bezier(0.215, 0.610, 0.355, 1);
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 0 auto;
+
+    &.active {
+        width: 100%;
+    }
+}
+
 .mobile-menu {
     position: fixed;
     display: none;
@@ -285,7 +301,10 @@ body {
     top: 0;
     bottom: 0;
     width: 225px;
-    background-image: url(#{$img}/);
+    background-image: url('#{$img}/mobile-menu-bg.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 85px 155px;
     background-color: $policeBLue;
     z-index: 3;
     transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -686,7 +705,7 @@ body {
 
 .footer {
     background-color: $darkGreen;
-    padding: 48px 0;
+    padding: 48px 15px;
 
     .footer__inner {
         @include flexBetween;
@@ -817,16 +836,19 @@ body {
     background-repeat: no-repeat;
     background-position: left 20%, right bottom;
 
-    @media screen and (max-width: 500px) {
-        background-position: left 20%,
-            right 110%;
-
-    }
 
     @media screen and (max-width: 768px) {
         background-position: left 20%,
             right 110%;
 
+    }
+
+    @media screen and (max-width: 500px) {
+        background-image: url(#{$img}/contact-bg.png),
+        url(#{$img}/contact-bg2.png);
+        background-repeat: no-repeat;
+        background-position: -80% 20%,
+            right 110%;
     }
 
     .form-inner {
@@ -916,6 +938,14 @@ body {
                     padding: 16px;
                     display: block;
                     width: 100%;
+                    color: white;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 25px;
+                    letter-spacing: -0.115385px;
+                    color: #FFFFFF;
+                    mix-blend-mode: normal;
                     outline: none;
 
                     @media screen and (max-width: 500px) {
@@ -953,6 +983,14 @@ body {
                     border-bottom: 1px solid white;
                     padding: 16px;
                     display: block;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 25px;
+                    letter-spacing: -0.115385px;
+                    color: #FFFFFF;
+                    mix-blend-mode: normal;
+                    color: white;
                     width: 100%;
                     resize: none;
                     outline: none;
@@ -992,11 +1030,22 @@ body {
                     font-size: 18px;
                     transition: 0.5s all ease;
                     line-height: 28px;
+                    position: relative;
+                    right: 10%;
+                    margin-top: 25px;
 
                     &:hover {
                         border-color: $jungleGreen;
                         background: $jungleGreen;
                         color: white;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        float: left;
+                        margin-top: 14px;
+                        position: relative;
+                        left: -12%;
+
                     }
 
                     @media screen and (max-width: 500px) {
@@ -1007,13 +1056,6 @@ body {
 
                     }
 
-                    @media screen and (max-width: 768px) {
-                        float: left;
-                        margin-top: 14px;
-                        position: relative;
-                        left: -19%;
-
-                    }
                 }
             }
         }

@@ -615,6 +615,23 @@ body {
   }
 }
 
+.overlay {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  -webkit-transition: 0.2s all cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: 0.2s all cubic-bezier(0.215, 0.61, 0.355, 1);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+}
+
+.overlay.active {
+  width: 100%;
+}
+
 .mobile-menu {
   position: fixed;
   display: none;
@@ -622,7 +639,10 @@ body {
   top: 0;
   bottom: 0;
   width: 225px;
-  background-image: url(../../images/);
+  background-image: url("../../images/mobile-menu-bg.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 85px 155px;
   background-color: #2C6269;
   z-index: 3;
   -webkit-transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -1116,7 +1136,7 @@ body {
 
 .footer {
   background-color: #002529;
-  padding: 48px 0;
+  padding: 48px 15px;
 }
 
 .footer .footer__inner {
@@ -1300,15 +1320,17 @@ body {
   background-position: left 20%, right bottom;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .form {
     background-position: left 20%, right 110%;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .form {
-    background-position: left 20%, right 110%;
+    background-image: url(../../images/contact-bg.png), url(../../images/contact-bg2.png);
+    background-repeat: no-repeat;
+    background-position: -80% 20%, right 110%;
   }
 }
 
@@ -1429,6 +1451,14 @@ body {
   padding: 16px;
   display: block;
   width: 100%;
+  color: white;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
   outline: none;
 }
 
@@ -1471,6 +1501,14 @@ body {
   border-bottom: 1px solid white;
   padding: 16px;
   display: block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  color: white;
   width: 100%;
   resize: none;
   outline: none;
@@ -1512,6 +1550,9 @@ body {
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   line-height: 28px;
+  position: relative;
+  right: 10%;
+  margin-top: 25px;
 }
 
 .form .form-inner .left form button:hover {
@@ -1520,16 +1561,16 @@ body {
   color: white;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .form .form-inner .left form button {
     float: left;
     margin-top: 14px;
     position: relative;
-    left: -19%;
+    left: -12%;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .form .form-inner .left form button {
     float: left;
     margin-top: 14px;
