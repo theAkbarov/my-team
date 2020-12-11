@@ -4,7 +4,7 @@ $(document).ready(function () {
         $('.mobile-menu').addClass('active');
         console.log('document work!!!');
         $('.overlay').addClass('active');
-        $('body').css({'overflow' : 'hidden', 'height' : '100vh'});
+        $('body').css('overflow', 'hidden')
     });
     $('.close-btn').click(function (e) {
         e.preventDefault();
@@ -14,14 +14,11 @@ $(document).ready(function () {
         $('.overlay').removeClass('active')
 
     });
- 
+
     $('.overlay').click(function () {
         $('.mobile-menu').removeClass('active');
         $('.overlay').removeClass('active')
-        $('body').css({
-            'overflow': 'unset',
-            'height': 'initial'
-        })
+        $('body').css('overflow', 'unset')
 
     })
 })
