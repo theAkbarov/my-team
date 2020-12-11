@@ -14,11 +14,19 @@ $(document).ready(function () {
         $('.overlay').removeClass('active')
 
     });
+    $('.item-icon').click(function (e) {
+        e.preventDefault();
+        $('.item-icon').toggleClass('active');
+        $('.layer').fadeToggle(400)
+
+    });
+
 
     $('.overlay').click(function () {
         $('.mobile-menu').removeClass('active');
         $('.overlay').removeClass('active')
         $('body').css('overflow', 'unset')
 
-    })
+    });
+
 })
