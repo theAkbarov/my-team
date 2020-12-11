@@ -210,7 +210,9 @@ body {
 .header {
     background-color: $midnightGreen;
     padding: 73px 0;
-
+@media screen and (max-width: 500px){
+    padding: 35px 0;
+}
     .header__inner {
         @include flexBetween;
 
